@@ -1,4 +1,5 @@
 # Simple-MLLM
+> Simple-MLLM is a simple locally deployed Multimodal Large Model (MLLM) practice. Let's get your hands on the magic of MLLM, just on your local machine!
 
 😎这是一个在本地部署的**简易**多模态大模型（MLLM）的实例，支持包括图片、文字以及语音（*正在更新*）多种模态的输入。
 

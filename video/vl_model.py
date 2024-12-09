@@ -6,7 +6,7 @@ from modelscope import snapshot_download
 class VlModel:
     def __init__(self, model_dir=None):
         if not model_dir:
-            model_dir = snapshot_download("qwen/Qwen2-VL-2B-Instruct")
+            model_dir = 'Qwen2-VL/qwen/Qwen2-VL-2B-Instruct'  # 替换为你的模型权重地址
         self.model = Qwen2VLForConditionalGeneration.from_pretrained(
             model_dir, torch_dtype="auto", device_map="auto"
         )

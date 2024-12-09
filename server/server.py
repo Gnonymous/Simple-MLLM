@@ -59,6 +59,9 @@ class ImageTextQAHandler(socketserver.BaseRequestHandler):
                 response = v_model.video_chat(data, VIDEO_INFO)
                 info_log = f"用户输入:{data},当前视频长度:{len(VIDEO_INFO)},模型回复:{response}"
                 print(info_log)
+                 # 修改部分：检查 response 类型并转化为字符串
+                if isinstance(response, list):
+                    response = "\n".join(response)  # 或者使用 str(response)
                 self.request.send(response.encode('utf-8'))
             except ConnectionResetError:
                 break

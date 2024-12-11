@@ -6,7 +6,7 @@ sys.path.append('./')
 sys.path.append('../')
 import video.call_vl_model
 import audio.call_asr_model
-import video.vl_model
+from video.vl_model import VlModel
 
 # 这里只是占位，实际中需要替换为真正处理视频信息的相关逻辑和模型调用等
 VIDEO_INFO = []  # 模拟存储视频信息数据
@@ -28,7 +28,7 @@ class VideoInfoHandler(socketserver.BaseRequestHandler):
 # 处理图文问答相关服务的类（实际需对接对应模型或接口等）
 class ImageTextQAHandler(socketserver.BaseRequestHandler):
     def handle(self):
-        v_model = vl_model.VlModel()
+        v_model = VlModel
         while True:
             try:
                 # 省略语音内容转asr步骤，假设得到文本开始处理

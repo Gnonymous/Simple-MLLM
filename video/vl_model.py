@@ -1,7 +1,5 @@
 from transformers import Qwen2VLForConditionalGeneration, AutoTokenizer, AutoProcessor
 from qwen_vl_utils import process_vision_info
-from modelscope import snapshot_download
-
 
 class VlModel:
     def __init__(self, model_dir=None):
